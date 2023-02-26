@@ -27,20 +27,20 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 py-20 place-content-center md:place-content-start ">
+    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-200 px-6 sm:px-24">
       {projects.map((project, idx) => {
         return (
           <div
             key={idx}
-            className="flex flex-col items-center bg-neutral-50 rounded-xl shadow-sm py-3 px-5 gap-4"
+            className="grid grid-cols-1 place-items-center bg-neutral-100 rounded-xl shadow-md py-3 px-5 gap-4"
           >
             <img
-              className="object-contain object-center rounded-xl shadow-sm max-w-full hover:scale-105 duration-200"
+              className="bg-cover bg-center rounded-xl shadow-sm"
               src={project.mainImg}
               alt={project.name}
             />
             <h1 className="max-w-sm text-2xl font-medium">{project.name}</h1>
-            <p className="text-sm font-light text-gray-500 h-32 overflow-scroll">
+            <p className="max-w-full text-sm font-light text-gray-500">
               {project.desc}
             </p>
             <div className="flex w-full justify-around">
